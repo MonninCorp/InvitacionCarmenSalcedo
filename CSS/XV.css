@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@700&display=swap');
+
+/****************************** TODO ************************************************************************/
+
+*{
+    display: block;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    text-align: center;
+}
+
+head{
+    display: none;
+}
+/****************************** CABERA **********************************************************************/
+
+header{
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("../IMG/IMAGENES/cabecera.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: zoom 2s ease-in-out forwards;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+header div{
+    font-size: 40px;
+    padding-top: 7%;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Inicialmente invisible */
+    animation: fadeIn 1s ease-in forwards; /* Duración de la animación de 1 segundo */
+    animation-delay: 2s; /* El div aparece después de 2 segundos */
+}
+
+header h1{
+    font-size: 100px;
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-style: normal; 
+}
+
+/****************************** CONTADOR *********************************************************************/
+
+.count{
+    width: 100%;
+    background-color: #EEE;
+    color: #355691;
+    padding: 15px;
+    font-size: 20px;
+}
+
+#count{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.simply-section{
+    font-size: 28px;
+    width: 23%;
+    background-color: #355691;
+    color: #DDD;
+    height: 70px;
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/****************************** INFROMACION ******************************************************************/
+
+.info{
+    font-size: 20px;
+    width: 100%;
+    background-color: #29335C;
+    color: #EEE;
+    padding: 20px;
+}
+
+.info p{
+    font-size: 70px;    
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+img{
+    width: 15vh;
+    margin: auto;
+}
+
+a{
+    font-size: 30px;
+    width: 40%;
+    background-color: #EEE;
+    color: #29335C;
+    text-decoration: none;
+    margin: auto;
+    margin-top: 20px;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+/****************************** GALERIA **********************************************************************/
+
+.galeria{
+    width: 100%;
+    padding: 20px;
+    background-color: #eee;
+}
+
+.contain{
+    display: grid;
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(400px, 1fr)
+        )
+    ;
+    column-gap: 1.5%;
+}
+
+.contain img{
+    width: 100%;
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image;
+    animation-name: show;
+    animation-range: entry 25% cover 30%;
+    animation-fill-mode: both;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/****************************** CONFIRMACION *****************************************************************/
+
+.confirm{
+    font-size: 20px;
+    width: 100%;
+    background-color: #29335C;
+    color: #fff;
+    padding: 20px;
+}
+
+/****************************** CREDITOS *********************************************************************/
+
+.pie{
+    font-size: 18px;
+    margin: auto;
+    width: 100%;
+    padding: 15px;
+    background-color: #eee;
+    color: #aaa;
+}
+
+.pie a{
+    background-color: #aaa;
+    color: #eee;
+}
+
+/****************************** @ ******************************/
+
+@keyframes zoom {
+    0% { transform: scale(1); /* Imagen en su tamaño original */ }
+    50% { transform: scale(1.1); /* Zoom de la imagen al 120% */ }
+    100% { transform: scale(1); /* Regresa al tamaño original */ }
+}
+@keyframes fadeIn {
+    to {
+      opacity: 1; /* Aparece gradualmente */
+    }
+}
+
+@keyframes show{
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+}
